@@ -51,5 +51,20 @@ namespace Cine
 
             formulario.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logOutClick(object sender, RoutedEventArgs e)
+        {
+            var MainWindow = new MainWindow();
+
+            MainWindow.Show();
+
+            this.Close();
+
+        }
     }
 }

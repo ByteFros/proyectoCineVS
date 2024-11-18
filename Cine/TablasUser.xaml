@@ -24,5 +24,6 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="210" Cursor="Help" FontSize="22"><Run Language="es-mx" Text="Peliculas Disponibles"/></TextBlock>
         <Button x:Name="AddMovies" Grid.Column="1" Content="Añadir Pelicula
                 " HorizontalAlignment="Left" Margin="650,22,0,0" VerticalAlignment="Top" Height="38" Width="88" Click="addMovieBtn"/>
+        <Button Grid.Column="1" Content="Cerrar Sesion" HorizontalAlignment="Left" Margin="554,22,0,0" VerticalAlignment="Top" Height="38" Width="91" Click="logOutClick"/>
     </Grid>
 </Window>
