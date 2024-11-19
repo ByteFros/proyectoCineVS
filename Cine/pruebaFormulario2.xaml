@@ -1,14 +1,14 @@
-﻿<Window x:Class="Cine.FormularioCambio"
+﻿<Window x:Class="Cine.pruebaFormulario2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cine"
         mc:Ignorable="d"
-        Title="AgregarPelicula" Height="800" Width="800">
+        Title="pruebaFormulario2" Height="800" Width="800">
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
         <Grid>
-            <!-- Definimos las filas principales para los groupbox (se pueden colocar las que se necesiten aqui)-->
+            <!-- Definimos las filas principales para los GroupBox -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -20,6 +20,7 @@
                 <GroupBox.Header>
                     <TextBlock Text="Información General" FontSize="18"/>
                 </GroupBox.Header>
+                <!-- Usamos Grid en lugar de StackPanel -->
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -74,7 +75,7 @@
 
             <!-- Tercer GroupBox -->
             <GroupBox Grid.Row="2" Header="Géneros" Margin="10">
-                <Grid Margin="5,0,13,0" Height="268">
+                <Grid Margin="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="68*"/>
@@ -92,8 +93,8 @@
 
             <!-- Botones -->
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,373,0,10" Width="278">
-                <Button Content="✔ Aceptar" Width="100" Height="45" Click="addMovieBtn"  />
-                <Button Content="✖ Cancelar" Margin="5" Width="100" Height="45" Click="closeFormBtn" />
+                <Button Content="✔ Aceptar" Width="100" Click="Button_Click" Height="45" />
+                <Button Content="✖ Cancelar" Margin="5" Width="100" Height="45" />
             </StackPanel>
         </Grid>
     </ScrollViewer>

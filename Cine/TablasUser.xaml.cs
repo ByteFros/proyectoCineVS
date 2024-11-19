@@ -36,7 +36,7 @@ namespace Cine
 
         private void InitializeUI()
         {
-            if (rolUser == Role.Admin)
+            if (rolUser != Role.Admin)
             {
                 AddMovies.Visibility = Visibility.Collapsed;
             }
@@ -64,6 +64,11 @@ namespace Cine
             MainWindow.Show();
 
             this.Close();
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

@@ -15,6 +15,8 @@ namespace GUICine2Vista.Peliculas
         public List<String> Genero { get; set; } 
         public Int32 Duracion {  get; set; }
 
+        public int Sala {  get; set; }
+
         public DateTime FechaInicio {  get; set; }
         public DateTime FechaFin { get; set; }
         

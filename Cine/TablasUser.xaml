@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cine"
         mc:Ignorable="d"
-        Title="TablasUser" Height="450" Width="800">
+        Title="MENU" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,64,0,0" CanUserAddRows="False" >
+        <DataGrid ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,92,0,0" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Título" Binding="{Binding Titulo}" Width="*" />
                 <DataGridTextColumn Header="Idioma" Binding="{Binding Idioma}" Width="*" />
                 <DataGridTextColumn Header="Duración" Binding="{Binding Duracion}" Width="*" />
+                <DataGridTextColumn Header="Sala" Binding="{Binding Sala}" Width="*" />
                 <DataGridTextColumn Header="Fecha Inicio" Binding="{Binding FechaInicio}" Width="*" />
                 <DataGridTextColumn Header="Fecha Fin" Binding="{Binding FechaFin}" Width="*" />
                 <DataGridTextColumn Header="Genero" Binding="{Binding showGenre}" Width="*" />

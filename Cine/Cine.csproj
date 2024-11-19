@@ -62,6 +62,9 @@
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
     <Compile Include="Peliculas\Pelicula.cs" />
+    <Compile Include="pruebaFormulario2.xaml.cs">
+      <DependentUpon>pruebaFormulario2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TablasUser.xaml.cs">
       <DependentUpon>TablasUser.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pruebaFormulario2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TablasUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
