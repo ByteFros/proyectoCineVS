@@ -1,6 +1,7 @@
 ﻿using GUICine2Vista.Peliculas;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,11 @@ namespace Cine
     /// </summary>
     public partial class FormularioCambio : Window
     {
-        public FormularioCambio()
+        private ObservableCollection<Pelicula> Peliculas;
+        public FormularioCambio(ObservableCollection<Pelicula> peliculas)
         {
             InitializeComponent();
+            Peliculas = peliculas;
         }
 
         private void addMovieBtn(object sender, RoutedEventArgs e)
@@ -43,10 +46,15 @@ namespace Cine
                     FechaInicio = FechaInicioPicker.SelectedDate.Value,
                     FechaFin = FechaFinPicker.SelectedDate.Value,
                     Genero = GeneroListBox.SelectedItems.Cast<ListBoxItem>().Select(item => item.Content.ToString()).ToList()
+                   
                 };
 
+                Peliculas.Add(peli);
+
+                
                 // (Agregar a lista, base de datos, etc.)
                 MessageBox.Show($"Película '{peli.Titulo}' agregada correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Close();
             }
             catch (FormatException)
             {
@@ -56,6 +64,9 @@ namespace Cine
             {
                 MessageBox.Show($"Ocurrió un error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            FormularioCambio formulario = new FormularioCambio(Peliculas);
+            formulario.ShowDialog();
         }
 
 

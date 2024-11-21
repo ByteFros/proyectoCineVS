@@ -15,7 +15,7 @@ namespace Cine
     public partial class MainWindow : Window
     {
         public ObservableCollection<User> listUsers { get; set; }
-        public List<Pelicula> Peliculas { get; set; }
+        public ObservableCollection<Pelicula> Peliculas { get; set; }
         private int intentos = 0;
         public MainWindow()
         {
@@ -26,63 +26,7 @@ namespace Cine
             listUsers.Add(new User("a", "a", "a", Role.Admin));
             listUsers.Add(new User("admin", "admin@admin.com", "admin", Role.Admin));
 
-
-            
-
-            // Crear la lista de películas
-            Peliculas = new List<Pelicula>
-        {
-            new Pelicula()
-            {
-                Titulo = "La Aventura Espacial",
-                Idioma = "Español",
-                Genero = new List<string> { "Ciencia Ficción", "Aventura" },
-                Duracion = 120,
-                Sala = 1,
-                FechaInicio = new DateTime(2024, 10, 10),
-                FechaFin = new DateTime(2024, 10, 20)
-            },
-            new Pelicula()
-            {
-                Titulo = "El Último Samurai",
-                Idioma = "Inglés",
-                Genero = new List<string> { "Acción", "Drama" },
-                Duracion = 150,
-                Sala = 2,
-                FechaInicio = new DateTime(2024, 10, 15),
-                FechaFin = new DateTime(2024, 10, 30)
-            },
-            new Pelicula()
-            {
-                Titulo = "Cazadores de Sombras",
-                Idioma = "Español",
-                Genero = new List<string> { "Fantasía", "Aventura" },
-                Sala = 3,
-                Duracion = 130,
-                FechaInicio = new DateTime(2024, 10, 12),
-                FechaFin = new DateTime(2024, 10, 28)
-            },
-            new Pelicula()
-            {
-                Titulo = "La Vida es Bella",
-                Idioma = "Italiano",
-                Genero = new List<string> { "Drama", "Comedia" },
-                Sala = 4,
-                Duracion = 116,
-                FechaInicio = new DateTime(2024, 10, 5),
-                FechaFin = new DateTime(2024, 10, 15)
-            },
-            new Pelicula()
-            {
-                Titulo = "Inception",
-                Idioma = "Inglés",
-                Genero = new List<string> { "Ciencia Ficción", "Thriller" },
-                Sala = 5,
-                Duracion = 148,
-                FechaInicio = new DateTime(2024, 10, 20),
-                FechaFin = new DateTime(2024, 11, 5)
-            }
-        };
+            Peliculas = new ObservableCollection<Pelicula>();
 
             DataContext = this;
         

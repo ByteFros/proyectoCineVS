@@ -11,20 +11,29 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,92,0,0" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged" >
+
+        <!-- DataGrid que muestra las películas -->
+        <DataGrid ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,92,0,0" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Título" Binding="{Binding Titulo}" Width="*" />
-                <DataGridTextColumn Header="Idioma" Binding="{Binding Idioma}" Width="*" />
-                <DataGridTextColumn Header="Duración" Binding="{Binding Duracion}" Width="*" />
-                <DataGridTextColumn Header="Sala" Binding="{Binding Sala}" Width="*" />
-                <DataGridTextColumn Header="Fecha Inicio" Binding="{Binding FechaInicio}" Width="*" />
-                <DataGridTextColumn Header="Fecha Fin" Binding="{Binding FechaFin}" Width="*" />
-                <DataGridTextColumn Header="Genero" Binding="{Binding showGenre}" Width="*" />
+                <DataGridTextColumn Header="Título" Binding="{Binding Titulo}" Width="Auto" />
+                <DataGridTextColumn Header="Idioma" Binding="{Binding Idioma}" Width="Auto" />
+                <DataGridTextColumn Header="Duración" Binding="{Binding Duracion}" Width="Auto" />
+                <DataGridTextColumn Header="Sala" Binding="{Binding Sala}" Width="Auto" />
+                <DataGridTextColumn Header="Fecha Inicio" Binding="{Binding FechaInicio}" Width="Auto" />
+                <DataGridTextColumn Header="Fecha Fin" Binding="{Binding FechaFin}" Width="Auto" />
+                <DataGridTextColumn Header="Genero" Binding="{Binding showGenre}" Width="Auto" />
             </DataGrid.Columns>
         </DataGrid>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="210" Cursor="Help" FontSize="22"><Run Language="es-mx" Text="Peliculas Disponibles"/></TextBlock>
-        <Button x:Name="AddMovies" Grid.Column="1" Content="Añadir Pelicula
-                " HorizontalAlignment="Left" Margin="650,22,0,0" VerticalAlignment="Top" Height="38" Width="88" Click="addMovieBtn"/>
+
+        <!-- Título -->
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="210" Cursor="Help" FontSize="22">
+            <Run Language="es-mx" Text="Peliculas Disponibles"/>
+        </TextBlock>
+
+        <!-- Botón para añadir películas -->
+        <Button x:Name="AddMovies" Grid.Column="1" Content="Añadir Pelicula" HorizontalAlignment="Left" Margin="650,22,0,0" VerticalAlignment="Top" Height="38" Width="88" Click="addMovieBtn"/>
+
+        <!-- Botón para cerrar sesión -->
         <Button Grid.Column="1" Content="Cerrar Sesion" HorizontalAlignment="Left" Margin="554,22,0,0" VerticalAlignment="Top" Height="38" Width="91" Click="logOutClick"/>
     </Grid>
 </Window>
