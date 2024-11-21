@@ -65,8 +65,6 @@ namespace Cine
                 MessageBox.Show($"Ocurrió un error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            FormularioCambio formulario = new FormularioCambio(Peliculas);
-            formulario.ShowDialog();
         }
 
 
