@@ -15,18 +15,18 @@ using System.Windows.Shapes;
 namespace Cine
 {
     /// <summary>
-    /// Lógica de interacción para pruebaFormulario2.xaml
+    /// Lógica de interacción para pruebaVentana.xaml
     /// </summary>
-    public partial class pruebaFormulario2 : Window
+    public partial class pruebaVentana : Window
     {
-        public pruebaFormulario2(GUICine2Vista.Peliculas.Pelicula selectedMovie)
+        public pruebaVentana()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void closeWinBtn(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

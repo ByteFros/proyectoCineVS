@@ -65,6 +65,9 @@
     <Compile Include="pruebaFormulario2.xaml.cs">
       <DependentUpon>pruebaFormulario2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pruebaVentana.xaml.cs">
+      <DependentUpon>pruebaVentana.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TablasUser.xaml.cs">
       <DependentUpon>TablasUser.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="pruebaFormulario2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pruebaVentana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

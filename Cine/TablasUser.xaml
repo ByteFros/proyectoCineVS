@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- DataGrid que muestra las películas -->
-        <DataGrid ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,92,0,0" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged">
+        <DataGrid x:Name="MoviesDataGrid" ItemsSource="{Binding Peliculas}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,92,0,0" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged" MouseDoubleClick="selectMovieClick" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Título" Binding="{Binding Titulo}" Width="Auto" />
                 <DataGridTextColumn Header="Idioma" Binding="{Binding Idioma}" Width="Auto" />

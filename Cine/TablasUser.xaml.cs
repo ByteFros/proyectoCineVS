@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Cine
 {
@@ -115,6 +116,20 @@ namespace Cine
         private void DataGrid_SelectionChanged(object sender, RoutedEventArgs e)
         {
             // Lógica para el evento de selección en el DataGrid si se necesita
+        }
+
+        private void selectMovieClick(object sender, MouseButtonEventArgs e)
+        {
+            if(MoviesDataGrid.SelectedItem is Pelicula selectedMovie && MoviesDataGrid.CurrentColumn != null)
+            {
+                pruebaVentana prueba2 = new pruebaVentana();
+                prueba2.ShowDialog();
+            }
+        }
+
+        private void DataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
