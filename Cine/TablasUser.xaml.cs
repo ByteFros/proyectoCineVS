@@ -131,5 +131,13 @@ namespace Cine
         {
 
         }
+
+        private void ButtonAbrirGUI3_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una nueva instancia de GUI3
+            GUI3 nuevaVentana = new GUI3(Peliculas);
+            // Mostrar la ventana como modal
+            nuevaVentana.ShowDialog();
+        }
     }
 }

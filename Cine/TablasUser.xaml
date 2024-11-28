@@ -35,5 +35,9 @@
 
         <!-- Botón para cerrar sesión -->
         <Button Grid.Column="1" Content="Cerrar Sesion" HorizontalAlignment="Left" Margin="554,22,0,0" VerticalAlignment="Top" Height="38" Width="91" Click="logOutClick"/>
+        <!--Boton para abrir el filtro de peliculas-->
+        <Button Name="ButtonAbrirGUI3" Grid.Column="1" Content="Abrir Filtros de Películas" Width="137" Height="38" 
+VerticalAlignment="Top" HorizontalAlignment="Left" Margin="412,22,0,0" Click="ButtonAbrirGUI3_Click"
+Panel.ZIndex="1"/>
     </Grid>
 </Window>

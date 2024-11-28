@@ -65,3 +65,7 @@ C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\pruebaFormular
 C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\pruebaFormulario2.baml
 C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\pruebaVentana.g.cs
 C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\pruebaVentana.baml
+C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\GUI3.g.cs
+C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\GUI4.g.cs
+C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\SalaCine.g.cs
+C:\Users\alejo\Desktop\Repositorios\proyectoCineVS\Cine\obj\Debug\App.baml
